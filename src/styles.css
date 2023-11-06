@@ -1,0 +1,187 @@
+/* Reset CSS */
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+a,
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container {
+
+    width: 302px;
+
+    background-image: linear-gradient(0deg,
+            hsl(0deg 0% 68%) 61%,
+            hsl(344deg 0% 72%) 76%,
+            hsl(344deg 0% 76%) 80%,
+            hsl(344deg 0% 80%) 83%,
+            hsl(344deg 0% 84%) 86%,
+            hsl(344deg 0% 88%) 89%,
+            hsl(344deg 0% 92%) 92%,
+            hsl(344deg 0% 90%) 96%,
+            hsl(0deg 0% 96%) 100%);
+}
+
+nav {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+}
+
+nav p {
+    margin: auto;
+    font-weight: bold;
+}
+
+.circle-button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    position: absolute;
+    left: 0;
+
+    margin-left: 10px;
+
+}
+
+.circle-button {
+    width: 16px;
+    height: 16px;
+
+    background-color: blue;
+    border-radius: 50%;
+
+}
+
+.screen {
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 10px;
+
+    height: 60px;
+
+    border-radius: 10px;
+    box-shadow: inset 0px -3px 3px #d1cdcd;
+    box-shadow: inset 0px 3px 3px rgb(138, 135, 135);
+    box-shadow: inset -3px 3px 3px rgb(155, 152, 152);
+
+    background-color: #f0f9cf;
+}
+
+.screen-text-group {
+    margin-right: 10px;
+}
+
+.keyboard {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    /* background-color: azure; */
+}
+
+.simple-button-line {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 10px;
+
+    gap: 10px;
+}
+
+.keyboard-button {
+    border: 1px solid black;
+}
+
+.end-line {
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    margin-top: 10px;
+
+    gap: 10px;
+
+}
+
+.end-line-buttons {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.end-line-buttons-first {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.end-line-buttons-second {
+    display: grid;
+    grid-template-columns:
+        2fr 1fr;
+
+    gap: 10px;
+}
+
+.end-line-buttons-second .end-line-button-zero {
+    width: 136px;
+}
+
+.end-line-equal {
+    width: 100%;
+    height: 100%;
+}
+
+.end-line-equal button {
+    width: 100%;
+    height: 100%;
+}
+
+.end-line-equal button {}
+
+button {
+
+    border: 1px solid rgb(110, 109, 109);
+    border-radius: 4px;
+
+    background: linear-gradient(0deg, #d6d6d6 0%, #d6d6d6 80%, #d6d6d6 80%, rgb(223, 219, 219) 100%);
+
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+
+    width: 63px;
+    height: 44px;
+}
