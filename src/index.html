@@ -35,45 +35,45 @@
         <div class="keyboard">
 
         <div class="simple-button-line">
-            <button>MC</button>
+            <button onclick="memoryClear()">MC</button>
             <button>M+</button>
             <button>M-</button>
-            <button>MR</button>
+            <button onclick="memoryRead()">MR</button>
         </div>
 
         <div class="simple-button-line">
-            <button>C</button>
-            <button>±</button>
-            <button>÷</button>
-            <button>x</button>
+            <button onclick="clearOperation()">C</button>
+            <button onclick="changeSignalOperation()">±</button>
+            <button onclick="divisionOperation()">÷</button>
+            <button onclick="multiplicationOperation()">x</button>
         </div>
 
         <div class="simple-button-line">
             <button onclick="setOperation(7)">7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>-</button>
+            <button onclick="setOperation(8)">8</button>
+            <button onclick="setOperation(9)">9</button>
+            <button onclick="minusOperation()">-</button    >
         </div>
 
         <div class="simple-button-line">
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>+</button>
+            <button onclick="setOperation(4)">4</button>
+            <button onclick="setOperation(5)">5</button>
+            <button onclick="setOperation(6)">6</button>
+            <button onclick="plusOperation()">+</button>
         </div>
 
         <div class="end-line">
 
             <div class="end-line-buttons">
                 <div class="end-line-buttons-first">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
+                    <button onclick="setOperation(1)">1</button>
+                    <button onclick="setOperation(2)">2</button>
+                    <button onclick="setOperation(3)">3</button>
                 </div>
 
                 <div class="end-line-buttons-second">
-                    <button class="end-line-button-zero">0</button>
-                    <button class="end-line-button-one">.</button>
+                    <button class="end-line-button-zero" onclick="setOperation(0)">0</button>
+                    <button class="end-line-button-one" onclick="setComma()">.</button>
                 </div>
                 
             </div>
