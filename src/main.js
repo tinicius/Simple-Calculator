@@ -33,6 +33,8 @@ const clearOperation = () => {
 };
 
 const changeSignalOperation = () => {
+  if (operation.length == 0) return;
+
   expressionText = eval(operation) * -1;
   operation = eval(operation) * -1;
 
@@ -41,11 +43,14 @@ const changeSignalOperation = () => {
 };
 
 const calculate = () => {
-  operation = eval(operation);
-  expressionText = eval(operation);
+  const result = Number(eval(operation));
 
-  document.getElementsByClassName("screen-text-2")[0].innerHTML =
-    eval(operation);
+  if (Number.isNaN(result)) return;
+
+  operation = result;
+  expressionText = result;
+
+  document.getElementsByClassName("screen-text-2")[0].innerHTML = result;
 };
 
 const memoryRead = () => {
