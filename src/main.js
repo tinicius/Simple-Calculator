@@ -40,10 +40,6 @@ const changeSignalOperation = () => {
     expressionText;
 };
 
-const setComma = () => {
-  operation += ",";
-};
-
 const calculate = () => {
   operation = eval(operation);
   expressionText = eval(operation);
