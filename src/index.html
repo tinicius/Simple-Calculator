@@ -27,8 +27,8 @@
 
         <div class="screen">
             <div class="screen-text-group">
-                <p class="screen-text-1">1+1ma</p>
-                <p class="screen-text-2">2</p>
+                <p class="screen-text-1"></p>
+                <p class="screen-text-2"></p>
             </div>
         </div>
 
@@ -36,30 +36,30 @@
 
         <div class="simple-button-line">
             <button onclick="memoryClear()">MC</button>
-            <button>M+</button>
-            <button>M-</button>
+            <button onclick="memoryAdd()">M+</button>
+            <button onclick="memoryRemove()">M-</button>
             <button onclick="memoryRead()">MR</button>
         </div>
 
         <div class="simple-button-line">
             <button onclick="clearOperation()">C</button>
             <button onclick="changeSignalOperation()">±</button>
-            <button onclick="divisionOperation()">÷</button>
-            <button onclick="multiplicationOperation()">x</button>
+            <button onclick="setOperation('/')">÷</button>
+            <button onclick="setOperation('*')">x</button>
         </div>
 
         <div class="simple-button-line">
             <button onclick="setOperation(7)">7</button>
             <button onclick="setOperation(8)">8</button>
             <button onclick="setOperation(9)">9</button>
-            <button onclick="minusOperation()">-</button    >
+            <button onclick="setOperation('-')">-</button    >
         </div>
 
         <div class="simple-button-line">
             <button onclick="setOperation(4)">4</button>
             <button onclick="setOperation(5)">5</button>
             <button onclick="setOperation(6)">6</button>
-            <button onclick="plusOperation()">+</button>
+            <button onclick="setOperation('+')">+</button>
         </div>
 
         <div class="end-line">

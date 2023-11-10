@@ -1,55 +1,73 @@
+let operation = "";
+let memory = 0;
 
-let operation = ""
-let memory = ""
+let expressionText = "";
 
 const setOperation = (value) => {
-    operation += value
-}
-const clearOperation = () =>{
-    operation = ""
-}
+  switch (value) {
+    case "/":
+      operation += "/";
+      expressionText += "÷";
+      break;
 
-const plusOperation = () =>{
-    operation += "+"
-}
+    case "*":
+      operation += "*";
+      expressionText += "x";
+      break;
 
-const minusOperation = () =>{
-    operation += "-"
-}
-const divisionOperation = () =>{
-    operation += "/"
-}
+    default:
+      operation += value;
+      expressionText += value;
+      break;
+  }
 
-const multiplicationOperation = () =>{
-    operation += "*"
-}
+  document.getElementsByClassName("screen-text-1")[0].innerHTML =
+    expressionText;
+};
 
-const changeSignalOperation = () =>{
-    operation += "* (-1)"
-}
+const clearOperation = () => {
+  operation = "";
+  expressionText = "";
+  document.getElementsByClassName("screen-text-1")[0].innerHTML = "";
+  document.getElementsByClassName("screen-text-2")[0].innerHTML = "";
+};
 
-const setComma = () =>{
-    operation += ","
-}
+const changeSignalOperation = () => {
+  expressionText = eval(operation) * -1;
+  operation = eval(operation) * -1;
+
+  document.getElementsByClassName("screen-text-1")[0].innerHTML =
+    expressionText;
+};
+
+const setComma = () => {
+  operation += ",";
+};
+
 const calculate = () => {
-    //alert(operation)
-    alert(eval(operation))
-}
+  operation = eval(operation);
+  expressionText = eval(operation);
+
+  document.getElementsByClassName("screen-text-2")[0].innerHTML =
+    eval(operation);
+};
+
 const memoryRead = () => {
-    alert(memory)
-}
+  operation += memory;
+  expressionText += memory;
+
+  document.getElementsByClassName("screen-text-1")[0].innerHTML =
+    expressionText;
+};
 
 const memoryClear = () => {
-    memory = ""
-}
+  memory = 0;
+};
 
-const memorySave = () => {
-    memory = eval(operation)
-}
+const memoryAdd = () => {
+  if (!Number.isNaN(Number(eval(operation)))) memory += Number(eval(operation));
+};
 
-const memoryAdd = () =>{
-
-}
-const memoryRemove = () =>{
-
-}
+const memoryRemove = () => {
+  if (!Number.isNaN(Number(eval(operation)))) memory -= Number(eval(operation));
+};
