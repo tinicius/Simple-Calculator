@@ -4,6 +4,7 @@ let memory = 0;
 let expressionText = "";
 
 const setOperation = (value) => {
+
   switch (value) {
     case "/":
       operation += "/";
@@ -72,3 +73,36 @@ const memoryAdd = () => {
 const memoryRemove = () => {
   if (!Number.isNaN(Number(eval(operation)))) memory -= Number(eval(operation));
 };
+
+document.addEventListener(
+  "keypress",
+  (event) => {
+    var name = event.key;
+    var code = event.code;
+
+    if (
+      (code.includes("Digit") || code.includes("Numpad")) &&
+      !Number.isNaN(Number(name))
+    ) {
+      setOperation(name);
+    } else if ((code == "Equal" && name === "+") || code == "NumpadAdd") {
+      setOperation("+");
+    } else if ((code == "Minus" && name === "-") || code == "NumpadSubtract") {
+      setOperation("-");
+    } else if ((code == "Digit8" && name === "*") || code == "NumpadMultiply") {
+      setOperation("*");
+    } else if ((code == "IntlRo" && name === "/") || code == "NumpadDivide") {
+      setOperation("/");
+    } else if (code == "KeyW") {
+      memoryAdd();
+    } else if (code == "KeyE") {
+      memoryRemove();
+    } else if (code == "KeyR") {
+      memoryRead();
+    } else if (code == "Enter" || code == "NumpadEnter") {
+      calculate();
+    }
+
+  },
+  false
+);
